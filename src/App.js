@@ -22,12 +22,6 @@ function App() {
       },
     });
 
-    instance.registerConnectionType('removeable-connection', {
-      paintStyle: { stroke: 'green', strokeWidth: '2px' },
-      hoverPaintStyle: { stroke: 'red', strokeWidth: '5px' },
-      connector: 'Bezier',
-    });
-
     instance.bind('connection', (connection) => {
       alert('New connection established');
       setConnections([...connections, connection]);
